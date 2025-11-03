@@ -1,18 +1,22 @@
 import React from 'react'
-import Navbar from '../../Navbar';
+
 import Hero from './Hero';
-import LeftSection from './LeftSection';
-import RightSection from './RightSection';
+import Kite from './Kite';
+import Console from './Console';
+import Coin from './Coin'
+import KiteConnectAPI from './KIteConnectAPI';
 import Universe from './Universe';
-import Footer from '../../Footer';
+
 
 function ProductPage() {
     return ( 
         <>
             
             <Hero/>
-            <LeftSection/>
-            <RightSection/>
+            <Kite/>
+            <Console/>
+            <Coin/>
+            <KiteConnectAPI/>
             <Universe/>
             
         </>
