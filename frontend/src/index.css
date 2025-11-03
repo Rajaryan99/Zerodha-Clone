@@ -30,3 +30,19 @@ code {
   color: rgb(70, 70, 70);
   line-height: 1.8;
 }
+
+
+.Founder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  
+}
+.Founder  img { 
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2rem;
+}
