@@ -21,7 +21,10 @@ function ProductPage() {
            googlePlay="https://play.google.com/store/apps/details?id=com.zerodha.kite3&hl=en_IN" 
            appStore="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802" />
 
-            <RightSection/>
+            <RightSection imageURL="media/images/console.png"
+             productTitle="Console" 
+             productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations." 
+             learnMore/>
 
              <LeftSection imageURL="media/images/coin.png" 
            productTitle="Coin" 
@@ -31,7 +34,10 @@ function ProductPage() {
            googlePlay="https://play.google.com/store/apps/details?id=com.zerodha.kite3&hl=en_IN" 
            appStore="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802" />
 
-            <RightSection/>
+            <RightSection imageURL="media/images/kiteconnect.png"
+             productTitle="Kite Connect API" 
+             productDescription="Build powerful trading platforms and experiences with our super simple HTTP/JSON APIs. If you are a startup, build your investment app and showcase it to our clientbase." 
+             learnMore/>
 
              <LeftSection imageURL="media/images/varsity.png" 
            productTitle="Varsity mobile" 
