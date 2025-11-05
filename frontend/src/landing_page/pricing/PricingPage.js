@@ -1,13 +1,18 @@
 import React from 'react'
-import Navbar from '../../Navbar';
+
 import Hero from './Hero';
-import Brokeage from './Brokerage';
+import OpenAccount from '../../OpenAccount';
+import Brokerage from '../pricing/Brokerage'
+
 
 function PricingPage() {
     return ( 
         <>
     
             <Hero/>
+            <OpenAccount/>
+            <Brokerage/>
+            
            
         </>
      );
