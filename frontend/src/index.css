@@ -46,3 +46,42 @@ code {
   object-fit: cover;
   margin-top: 2rem;
 }
+
+#supportHero{
+  background-color: #387ED1;
+   color: #fff;
+}
+
+#supportwrapper{
+ 
+  display: flex;
+  justify-content: space-between;
+  margin: 0 200px;
+}
+
+#supportwrapper a {
+  color: #fff;
+}
+
+
+
+#supportSearch a {
+ color: #fff;
+ text-decoration: underline ;
+}
+
+#supportSearch input {
+  width: 500px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.input-field::placeholder{
+  font-size: 20px;
+}
