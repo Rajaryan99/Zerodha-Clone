@@ -187,6 +187,11 @@ app.get('/', (req, res) => {
 // })
 
 
+app.get('/allHoldings', async(req, res) => {
+  let allHoldings = await HoldingsModel.find({});
+  res.json(allHoldings);
+})
+
 
 mongoose.connect(uri)
 .then(() => {
