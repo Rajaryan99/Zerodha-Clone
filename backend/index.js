@@ -4,13 +4,19 @@ require('dotenv').config();
 const {HoldingsModel} = require('./models/HoldingsModel');
 const {PositionModel} =require('./models/PositionMdel');
 const bodyParser = require('body-parser');
-const cors = require('cors')
+const cors = require('cors');
+
+const {OrderModel} = require('./models/OrderModel')
 
 
 const app = express()
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}))
 
 const PORT = process.env.PORT || 8080;
 const uri = process.env.MONGO_URL
@@ -200,7 +206,37 @@ app.get('/allHoldings', async(req, res) => {
 app.get('/allPosition', async(req, res) => {
   let allPosition = await PositionModel.find({});
   res.json(allPosition);
-})
+});
+
+// app.post('/newOrder', async (req, res) => {
+//   let newOrder = new OrderModel({
+//     name: req.body.name,
+//     qty: req.body.qty,
+//     price: req.body.price,
+//     mode: req.body.mode,
+//   });
+//   newOrder.save();
+
+//   res.send('Order Saved!')
+// })
+
+app.post('/newOrder', async (req, res) => {
+  try {
+    // console.log('>>> /newOrder headers:', req.headers);
+    // console.log('>>> /newOrder body:', req.body);
+
+    const { name, qty, price, mode } = req.body || {};
+    if (!name) return res.status(400).send('Something went wrong');
+
+    const newOrder = new OrderModel({ name, qty, price, mode });
+    await newOrder.save();
+
+    return res.status(201).send('Order Saved!');
+  } catch (err) {
+    console.error('Error in /newOrder:', err);
+    return res.status(500).send('Server error');
+  }
+});
 
 
 mongoose.connect(uri)

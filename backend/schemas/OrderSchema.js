@@ -1,6 +1,6 @@
 const mongoose   = require('mongoose');
 
-const {OrderSchema}  = new OrderSchema({
+const OrderSchema  = new mongoose.Schema({
     name: String,
     qty: Number,
     price: Number,
