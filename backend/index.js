@@ -5,21 +5,35 @@ const {HoldingsModel} = require('./models/HoldingsModel');
 const {PositionModel} =require('./models/PositionMdel');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const authRoute = require('./Routes/AuthRoute');
 
 const {OrderModel} = require('./models/OrderModel')
 
 
 const app = express()
 
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(cookieParser());
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
 
 const PORT = process.env.PORT || 8080;
-const uri = process.env.MONGO_URL
+const uri = process.env.MONGO_URL;
+
+
+app.use(
+  cors({
+    origin: ["http://localhost:8080"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+app.use('/', authRoute);
 
 app.get('/', (req, res) => {
     res.send('helloWorld')
