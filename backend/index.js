@@ -115,8 +115,10 @@ const app = express();
 
 
 const FRONTEND_ORIGINS = [
-    'http://localhost:3001',
-    'http://localhost:3000'
+  "https://zerodha-clone-dashboard-c2fd.onrender.com",
+  "https://zerodha-clone-frontend-0bma.onrender.com"
+    // 'http://localhost:3001',
+    // 'http://localhost:3000'
 ];
 
 if (process.env.CLIENT_ORIGIN) {
