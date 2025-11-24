@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `${process.env.REACT_APP_API_URL}/login`,       // "http://localhost:8080/login",
+        "https://zerodha-clone-backend-ji45.onrender.com/login",       // "http://localhost:8080/login",
         {
           ...inputValue,
         },
