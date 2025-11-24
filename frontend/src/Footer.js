@@ -6,7 +6,7 @@ function Footer() {
             <div className='row mt-5 mb-5'>
                 <div className='col'>
                     {/* <img src="media/images/logo.png" alt="" style={{ width: "70%" }} /> */}
-                    <h2 className='mb-4'>StockEdge </h2>
+                    <h2 className='mb-4'>Zerodha </h2>
                     <p className='text-muted'>
                         © 2010 - 2025, Zerodha Broking Ltd.
 
