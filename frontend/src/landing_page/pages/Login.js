@@ -42,7 +42,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-         window.location.href = `${process.env.REACT_APP_DASHBOARD_API}`
+         window.location.href = "https://zerodha-clone-dashboard-c2fd.onrender.com"
         }, 1000);
       } else {
         handleError(message);
